@@ -1,7 +1,7 @@
 function sortedSquaredArray(array) {
     let pows = []
     for(let num of array) {
-      pows.push( Math.pow(num, 2) )
+      pows.push(Math.pow(num, 2) )
     } 
     
     return pows.sort((a,b) => a - b) 
