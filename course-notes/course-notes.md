@@ -60,3 +60,5 @@ We say that  an algorithm is `O(f(n)) if the number of simple operations the com
 * f(n) could be quadratic (f(n) = (n2))
 * f(n) could be constant(f(n) = 1)  
 * f(n) could be something entirely different
+
+Think about it like this: when n grows, will the graph grow with it? When talking about big O, that's the worst-case-scenario for runtime. 
