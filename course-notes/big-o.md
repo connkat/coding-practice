@@ -1,7 +1,7 @@
 # Big O notation
 
 ## Motivation
-There are tonnes of ways to solve issues, but how to determine the best solutions? Faster? Less memory? Readable? 
+There are tons of ways to solve issues, but how to determine the best solutions? Faster? Less memory? Readable? 
 
 For now we are going to evaluate speed:
 
@@ -56,9 +56,51 @@ How the runtime of an algorithm grows affects the time relative to that import. 
 In ex2, because we aren't looping, the growth is pretty consistent. Whereas in ex1, we can see a pretty standard 1:1 pattern. 
 
 We say that  an algorithm is `O(f(n)) if the number of simple operations the computer has to dois eventually less than a constant time `f(n)`, as `n` increases.
-* f(n) could be linear (f(n) = n)
+* f(n) could be linear (f(n) = n)--function of the input of n is equal to n
 * f(n) could be quadratic (f(n) = (n2))
 * f(n) could be constant(f(n) = 1)  
 * f(n) could be something entirely different
 
 Think about it like this: when n grows, will the graph grow with it? When talking about big O, that's the worst-case-scenario for runtime. 
+
+* O(1)--as n grows it has no change in the runtime. 
+  EX: ```
+  function addUpTo(n) {
+    n * N (n + 1) /2;
+  }
+  ```
+
+  * O(n)
+  num of operations is eventually bounded by a multiple of n--we simplify it down to n
+    ```
+    function addUpTo(n) {
+      let total = 0;
+      for (let i = 1; i <= n ; i++){
+        total += i ;
+      }
+      return total
+    }
+
+## Simplified: 
+
+  ### Get rid of variables
+  A- O(2n) = O(n)
+  B- O(500) = O(1)
+  C- O(13n2) = O(n2) (squared)
+  This is just simplified down because these are consistent values. It doesn't matter what the value is because the actual caluclation is consistent. We know that B will be faster than A and that C will be the slowest based off of the visible trends.
+
+  ### Smaller terms don't matter
+  O(n+10) = O(n)
+  O(1000n + 50) = O(n)
+  O(n2 = 5n + 8) = O(n2) ---the differnece between having and not having that secornd equation is negligable
+
+  ### Shorthand
+  - Arithmatic  operations are constant, your computer takes the same time to add 2 + 2 as it does 1Million + 2
+  - Variable assignment is consistent, 10 is the same as 1Billion
+  - Accessing alaments in an array(by index) or object (by key) is constant, so long as you have that value ready. 
+  - In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
+
+
+
+
+  
