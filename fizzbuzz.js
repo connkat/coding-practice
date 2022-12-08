@@ -1,6 +1,8 @@
-// Print `Fizz` if divisible by 5
-// Print `Buzz` if divisible by 3
+//Write a function that takes in an argument (num) and counts from 1 to num. 
+// Print `Fizz` if divisible by 3
+// Print `Buzz` if divisible by 5
 // Print `FizzBuzz` if divisible by both 5 and 3 
+// Print the number if none of the above conditions are met
 
 function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
