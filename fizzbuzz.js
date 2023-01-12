@@ -1,4 +1,5 @@
-//Write a function that takes in an argument (num) and counts from 1 to num. 
+// FizzBuzz
+// Write a function that takes in an argument (num) and counts from 1 to num. 
 // Print `Fizz` if divisible by 3
 // Print `Buzz` if divisible by 5
 // Print `FizzBuzz` if divisible by both 5 and 3 
