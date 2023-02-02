@@ -12,7 +12,6 @@ function minMaxSum(arr) {
 
 //easy solution
 function minMaxSum2(arr) {
-  let output = [];
   const sortedArr = arr.sort((a, b) => a - b);
 
   let minArr = sortedArr.slice(0, 4);
