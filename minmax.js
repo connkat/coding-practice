@@ -1,7 +1,7 @@
 // minMaxSum
 // write a function that given 5 numbers in an array will return the lowest
 // and the highest possible values when summing 4 out of the 5 numbers.
-// return these values as a string
+// return these values as a array
 
 function minMaxSum(arr) {
   let sum = arr.reduce((a, b) => a + b);

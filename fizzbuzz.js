@@ -14,3 +14,14 @@ function fizzBuzz(n) {
   }
 }
 console.log(fizzBuzz(15));
+
+function fizzBuzz2(n) {
+  for (let i = 1; i <= n; i++) {
+    let word = "";
+    if (i % 3 === 0) word += "Fizz";
+    if (i % 5 === 0) word += "Buzz";
+    console.log(word || i);
+  }
+}
+
+console.log(fizzBuzz2(15));
