@@ -25,7 +25,7 @@ addUpTo(1000000000);
 var t2 = performance.now();
 console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
 
-### Faster solutton: 
+### Faster solution: 
 ```
 function addUpTo(n) {
   return n * (n + 1) / 2;
@@ -95,12 +95,60 @@ Think about it like this: when n grows, will the graph grow with it? When talkin
   O(n2 = 5n + 8) = O(n2) ---the differnece between having and not having that secornd equation is negligable
 
   ### Shorthand
-  - Arithmatic  operations are constant, your computer takes the same time to add 2 + 2 as it does 1Million + 2
-  - Variable assignment is consistent, 10 is the same as 1Billion
-  - Accessing alaments in an array(by index) or object (by key) is constant, so long as you have that value ready. 
-  - In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
+  * Arithmatic  operations are constant, your computer takes the same time to add 2 + 2 as it does 1Million + 2
+  * Variable assignment is consistent, 10 is the same as 1Billion
+  * Accessing alaments in an array(by index) or object (by key) is constant, so long as you have that value ready. 
+  * In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
 
+## Space Complexity
+* Auxiliary space complexity resfer to the space required byt the algorithm, not including the space taken up by inputs. When we talk about space complexity we are talking about auxiliary space complexisty. 
+* Most primities are constant space. 1 === 1000
+* Strings require O(n) space (where n is the string length)
+* Reference types (objs and arrays) are O(n), where n is the length (for arrays) or the number of keys (for objs)
 
+### Example 1: 
+function sum(arr) {
+  let total = 0; 
+  let (i = 0; i < arr.length; i++){
+    total += array[i]
+  }
+  return total;
+}
 
+* What takes up space? We have one number (total) and then we have a second number (i). It doesn't matter what the size of the array is, it doesn't have an effect on the space taken up. We're adding to the variable but not adding a new variable === O(1)space
 
-  
+### Example 2: 
+function double(arr) {
+  let newArr = []; 
+  let (i = 0; i < arr.length; i++){
+    newArr.push(2 + arr[i])
+  }
+  return newArr;
+}
+
+* NewArr grows at the same rate as arr.length. === O(n)space
+
+## Logarithms 
+* Common complexities: O(1), O(n), O(n^2)
+
+## What's a log? 
+Log is an inverse of exponentiation. Logorithms and Exponents are realted the same way multiplication and division. 
+
+log2(8) = 3 -> 2^3 = 8 === logbase2(value) = exponent -> 2^eponent = value
+
+log2 is most common, log10 and logE are also common, but we're going to omit the 2 so log === log2 because we are dealing with time and we only care about general trends. Even though you can't just take the log of nothing, the shorthand is to exclude the base number. 
+
+*The logarithm of a number roughly measures the number of times you can devide that number by 2 before you get a value that's less than or equal to one.*
+
+### Example: 
+8/2 = 4, 4/2 = 2, 2/2 = 1 === log(8) = 3
+25/2 = 12.5, 12.5/2 = 6.25, 6.25/2 =3.125, 3.125 /2 0.68125 === log(25) =~4.64 
+
+## Logarithm Complexity
+[Logarithm Chart](course-notes/assets/big-o.jpeg)
+
+# Summary
+* To anaylze the perfoamce of an algo, we use Big O notation 
+* Big O Notation can give us high level understanding of space or time complexity of an algo
+* Big O Notation doesn't care about precision, only about general trends (linear? constant? quadratic?)
+* The sime or space complexity (as measured by Big O) depends only on the algo, not the hardware used to run the algo
