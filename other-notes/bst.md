@@ -30,7 +30,28 @@ Answer: speed and accuracy
 
 Due to the fact that the BS is in branch-like formation with parent-child relations, the algorithm knows in which location of the tree the lelments need to be searched. This decreases the number of key-value comparisons the program has to make to locate the desire element. The left side of the tree is always less and the right side always more.
 
-##Types of BTs
+## Types of BTs
 * Complete binary tree: all levels in the trees are full of last level's possible exceptions. Similarly, all the node are full, direcrting the far left. 
 * Full BT: All nodes have 2 child nodes except the lead. 
 * Balanced or Perfect binary tree: In the tree all the nodes have 2 children. Besides, there is the same level of each sub-node. 
+
+## How BST Works
+The tree always has a root node and further child nodes. The algorithm performs all the operations by comparing the values with the root and its further child nodes in the left or right sub-tree accordingly. BST primarily offers: Search, Insert, Delete. Each operation has its own structure and method of execution/analysis, but the most complex if Delete. 
+
+### Search: 
+Always initiated at the root node and then moves right or left depending on the elemnet to be located based on value: 
+```
+search(element, root)
+     if !root
+    	return -1
+     if root.value == element
+    	return 1
+     if root.value < element
+    	search(element, root.right)
+      else
+    	search(element, root.left)
+```
+
+### Insert: 
+
+### Delete: 
