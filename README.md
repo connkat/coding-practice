@@ -1,4 +1,4 @@
 # coding-practice
-Coding challenges and courses from around the internet to stay sharp and learn new skills.
+Coding challenges and courses from around the internet.
 
 All completed in Javascript.
