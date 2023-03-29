@@ -3,7 +3,7 @@
 // Print `Fizz` if divisible by 3
 // Print `Buzz` if divisible by 5
 // Print `FizzBuzz` if divisible by both 5 and 3 
-// Print the number if none of the above conditions are met
+// Print the number (num) if none of the above conditions are met
 
 function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
