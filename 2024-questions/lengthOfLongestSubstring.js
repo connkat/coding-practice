@@ -28,14 +28,14 @@ function lengthOfLongestSubstring(s) {
 	return longest;
 }
 
-function lengthOfLongestSubstring2(s) {
+function lengthOfLongestSubstring2(string) {
 	let left = 0;
 	let right = 0;
 	let maxSubLength = 0;
 	const hashSet = new Set();
-	while (right < s.length) {
-		if (!hashSet.has(s[right])) {
-			hashSet.add(s[right]);
+	while (right < string.length) {
+		if (!hashSet.has(string[right])) {
+			hashSet.add(string[right]);
 			maxSubLength = Math.max(maxSubLength, right + 1 - left);
 			right++;
 		} else {
@@ -47,3 +47,25 @@ function lengthOfLongestSubstring2(s) {
 }
 
 console.log(lengthOfLongestSubstring2(s));
+
+function lengthOfLongestSubstring3(string) {
+	let longestLength = 0;
+	let pointer = 0;
+	let start = 0;
+
+	let charSet = new Set();
+
+	while (pointer < string.length) {
+		// check if the current char exists in the set
+		if (charSet.has(string[pointer])) {
+			//if yes, delete from set
+			charSet.delete(string[start++]);
+			//else, add current char to set, then move
+		} else {
+			charSet.add(string[pointer++]);
+			longestLength = Math.max(longestLength, charSet.size);
+		}
+	}
+
+	return longestLength;
+}
