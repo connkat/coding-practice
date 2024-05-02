@@ -1,4 +1,4 @@
 # coding-practice
-Coding challenges and courses from around the internet for teaching at LHL
+Coding challenges and courses from around the internet
 
-All completed in Javascript
+All completed in Javascript (for now)
