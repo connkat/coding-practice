@@ -5,7 +5,6 @@ function isValid(s) {
 			stack.push(char);
 		} else {
 			if (
-				!stack.length ||
 				(char === ")" && stack[stack.length - 1] !== "(") ||
 				(char === "]" && stack[stack.length - 1] !== "[") ||
 				(char === "}" && stack[stack.length - 1] !== "{")
@@ -15,10 +14,14 @@ function isValid(s) {
 			stack.pop();
 		}
 	}
-
-	return true;
+	console.log(stack);
+	if (stack.length === 1 || 0) {
+		return false;
+	} else {
+		return !stack.length;
+	}
 }
 
-let s = "()";
+let s = "((";
 
 console.log(isValid(s));
